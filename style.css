@@ -1,0 +1,46 @@
+h1, p {
+  font-family: Lato;
+}
+.buttonWidth{
+  width:50%;
+}
+.marginText{
+  margin-bottom:5px;
+}
+button{
+  background-color:blue;
+  color:white;
+  padding-top:10px;
+  padding-bottom:10px;
+  font-size:10px;
+  margin-top:15px;
+}
+.lightText{
+opacity:0.3;
+}
+.lineThrough{
+text-decoration: line-through;
+text-decoration-color:rgb(99, 96, 96);
+}
+.headerMargin{
+  margin-bottom:5px;
+}
+.secondaryHeader{
+  font-size:10px;
+}
+.textFont{
+  font-size:12px;
+  opacity:0.7;
+}
+.leftContainer{
+width:60%;
+float:left ;
+}
+.rightContainer{
+margin-left:10px;  
+display:inline;
+}
+img{
+  width:35%;
+  height:250px;;
+}
