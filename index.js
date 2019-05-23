@@ -32,13 +32,13 @@ class App extends Component {
   render() {
 
     return (
-      <div>
+      <div className="row main-container">
       <h2 >Audio-Technica ATH-MSR7
       <div className="lightText secondaryHeader">2017 Best Headphones of tyhe Year Award Winner</div></h2>
       
       <br/>
-      <div className="container">
-      <div className="leftContainer">
+      <div className="container row col-12">
+      <div className="leftContainer col-xs-4 col-sm-4 col-md-6">
       <Tabs>
         <Tab value="description" header="Description">
           Springing from Audio-Technica's rich heritage in professional audio, the ATH-MSR7 Over-Ear High-Resolution Audio Headphones are designed to reproduce Hi-Res Audio allowing users to hear music the way it was intended.
@@ -57,13 +57,13 @@ class App extends Component {
         </Tab>
       </Tabs>
       </div>
-      <div className="rightContainer">
+      <div className="rightContainer col-xs-4 col-sm-4 col-md-6">
       <img src={this.state.imgUrls[this.state.dropdownValueSelected]}/>
       </div>
       </div>
       <br/>
     
-      <button className="buttonWidth" onClick={this.handleButtonLabel}>{this.state.buttonLabel}</button>
+      <button className="buttonWidth col-3" onClick={this.handleButtonLabel}>{this.state.buttonLabel}</button>
       <br/>
       <br/>
       {this.state.showSuccess && "Item added to cart!"}

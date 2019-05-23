@@ -29,6 +29,7 @@ export default class Tabs extends Component {
           key={tab.props.value}
           onClick={e => this.selectTab(e, tab.props.value)}
           style={i === 0 ? style : Object.assign({}, style, sideHeaderStyle)}
+          className="col-sm-6"
         >
           {tab.props.header}
         </span>
@@ -41,7 +42,7 @@ export default class Tabs extends Component {
     const tabs = Children.toArray(children);
 
     return (
-      <div style={tabsStyle}>
+      <div style={tabsStyle} className="row content-container">
         <div style={tabsHeaderStyle}>{this.getHeader(tabs)}</div>
         <div style={tabsContentStyle}>
           {_.find(tabs, tab => this.isSelected(tab))}
@@ -73,7 +74,8 @@ const tabsHeaderStyle = {
   justifyContent: "space-between",
   backgroundColor: "#f7f7f7",
   borderRadius: "8px 8px 0 0",
-  overflow: "hidden"
+  overflow: "hidden",
+  width: "100%"
 };
 
 const tabHeaderStyle = {
@@ -86,14 +88,17 @@ const tabHeaderStyle = {
 
 const activeTabHeaderStyle = Object.assign({}, tabHeaderStyle, {
   backgroundColor: "#fff",
-  borderBottom: "none",
+  borderBottom: "2px solid #5896FF",
   cursor: "auto"
 });
 
-const sideHeaderStyle = { borderLeft: borderStyle };
+const sideHeaderStyle = { 
+  borderLeft: borderStyle
+};
 
 const tabsContentStyle = {
   padding: "10px",
   borderTop: "none",
-  borderRadius: "0 0 8px 8px"
+  borderRadius: "0 0 8px 8px",
+  height: "100%"
 };
